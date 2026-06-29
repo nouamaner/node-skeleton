@@ -17,7 +17,12 @@
       "<rootDir>/src/test-setup.ts"
     ],
     "transform": {
-      "^.+\\.tsx?$": ["ts-jest", { "tsconfig": "tsconfig.test.json" }]
+      "^.+\\.tsx?$": [
+        "ts-jest",
+        {
+          "tsconfig": "tsconfig.test.json"
+        }
+      ]
     },
     "coverageThreshold": {
       "global": {
@@ -39,7 +44,9 @@
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
-    "jsonwebtoken": "^9.0.2"
+    "jsonwebtoken": "^9.0.2",
+    "swagger-jsdoc": "^6.3.0",
+    "swagger-ui-express": "^5.0.1"
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.6",
@@ -50,6 +57,8 @@
     "@types/jsonwebtoken": "^9.0.10",
     "@types/node": "^26.0.0",
     "@types/supertest": "^7.2.0",
+    "@types/swagger-jsdoc": "^6.0.4",
+    "@types/swagger-ui-express": "^4.1.8",
     "jest": "^30.4.2",
     "supertest": "^7.2.2",
     "ts-jest": "^29.4.11",

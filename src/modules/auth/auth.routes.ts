@@ -6,6 +6,48 @@ import { requireAuth, requireCsrf } from "./auth.middleware";
 
 const router = Router();
 
+/**
+ * @openapi
+ * /auth/signup:
+ *   post:
+ *     tags: [Auth]
+ *     summary: Create a new account
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             required: [email, password]
+ *             properties:
+ *               email:
+ *                 type: string
+ *                 format: email
+ *               password:
+ *                 type: string
+ *                 minLength: 8
+ *               name:
+ *                 type: string
+ *     responses:
+ *       201:
+ *         description: Account created; sets access_token and XSRF-TOKEN cookies
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/UserResponse'
+ *       400:
+ *         description: Missing fields or password too short
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/ErrorResponse'
+ *       409:
+ *         description: Email already in use
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/ErrorResponse'
+ */
 router.post("/signup", async (req, res) => {
   const { email, password, name } = req.body;
 
@@ -38,6 +80,45 @@ router.post("/signup", async (req, res) => {
     .json({ user: { id: user.id, email: user.email, name: user.name } });
 });
 
+/**
+ * @openapi
+ * /auth/login:
+ *   post:
+ *     tags: [Auth]
+ *     summary: Log in with email and password
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             required: [email, password]
+ *             properties:
+ *               email:
+ *                 type: string
+ *                 format: email
+ *               password:
+ *                 type: string
+ *     responses:
+ *       200:
+ *         description: Login successful; sets access_token and XSRF-TOKEN cookies
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/UserResponse'
+ *       400:
+ *         description: Missing email or password
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/ErrorResponse'
+ *       401:
+ *         description: Invalid credentials
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/ErrorResponse'
+ */
 router.post("/login", async (req, res) => {
   const { email, password } = req.body;
 
@@ -59,11 +140,71 @@ router.post("/login", async (req, res) => {
   });
 });
 
+/**
+ * @openapi
+ * /auth/logout:
+ *   post:
+ *     tags: [Auth]
+ *     summary: Log out and clear session cookies
+ *     security:
+ *       - cookieAuth: []
+ *         csrfHeader: []
+ *     responses:
+ *       200:
+ *         description: Logged out; cookies cleared
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 success:
+ *                   type: boolean
+ *       401:
+ *         description: Not authenticated
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/ErrorResponse'
+ *       403:
+ *         description: Invalid CSRF token
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/ErrorResponse'
+ */
 router.post("/logout", requireAuth, requireCsrf, (_req, res) => {
   clearAuthCookies(res);
   res.json({ success: true });
 });
 
+/**
+ * @openapi
+ * /auth/me:
+ *   get:
+ *     tags: [Auth]
+ *     summary: Get the currently authenticated user
+ *     security:
+ *       - cookieAuth: []
+ *     responses:
+ *       200:
+ *         description: Current user
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/UserResponse'
+ *       401:
+ *         description: Not authenticated
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/ErrorResponse'
+ *       404:
+ *         description: User not found
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/ErrorResponse'
+ */
 router.get("/me", requireAuth, (req, res) => {
   const user = users.find((u) => u.id === Number(req.user?.sub));
   if (!user) return res.status(404).json({ error: "User not found" });
