@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1782085192130" clover="3.2.0">
+  <project timestamp="1782085192130" name="All files">
+    <metrics statements="111" coveredstatements="111" conditionals="37" coveredconditionals="37" methods="16" coveredmethods="16" elements="164" coveredelements="164" complexity="0" loc="111" ncloc="111" packages="1" files="9" classes="9"/>
+    <file name="account.routes.ts" path="/Users/nouamaneraji/Dev/node-skeleton/src/account.routes.ts">
+      <metrics statements="10" coveredstatements="10" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
+      <line num="1" count="3" type="stmt"/>
+      <line num="2" count="3" type="stmt"/>
+      <line num="3" count="3" type="stmt"/>
+      <line num="5" count="3" type="stmt"/>
+      <line num="7" count="3" type="stmt"/>
+      <line num="8" count="3" type="stmt"/>
+      <line num="9" count="3" type="cond" truecount="2" falsecount="0"/>
+      <line num="11" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="12" count="2" type="stmt"/>
+      <line num="17" count="3" type="stmt"/>
+    </file>
+    <file name="app.ts" path="/Users/nouamaneraji/Dev/node-skeleton/src/app.ts">
+      <metrics statements="13" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <line num="1" count="3" type="stmt"/>
+      <line num="2" count="3" type="stmt"/>
+      <line num="3" count="3" type="stmt"/>
+      <line num="4" count="3" type="stmt"/>
+      <line num="5" count="3" type="stmt"/>
+      <line num="6" count="3" type="stmt"/>
+      <line num="8" count="3" type="stmt"/>
+      <line num="10" count="3" type="stmt"/>
+      <line num="11" count="3" type="stmt"/>
+      <line num="12" count="3" type="stmt"/>
+      <line num="14" count="3" type="stmt"/>
+      <line num="15" count="3" type="stmt"/>
+      <line num="17" count="3" type="stmt"/>
+    </file>
+    <file name="auth.middleware.ts" path="/Users/nouamaneraji/Dev/node-skeleton/src/auth.middleware.ts">
+      <metrics statements="19" coveredstatements="19" conditionals="7" coveredconditionals="7" methods="2" coveredmethods="2"/>
+      <line num="2" count="4" type="stmt"/>
+      <line num="3" count="4" type="stmt"/>
+      <line num="4" count="4" type="stmt"/>
+      <line num="14" count="4" type="stmt"/>
+      <line num="15" count="15" type="stmt"/>
+      <line num="16" count="15" type="cond" truecount="2" falsecount="0"/>
+      <line num="17" count="5" type="stmt"/>
+      <line num="18" count="5" type="stmt"/>
+      <line num="20" count="10" type="stmt"/>
+      <line num="21" count="10" type="stmt"/>
+      <line num="22" count="9" type="stmt"/>
+      <line num="24" count="1" type="stmt"/>
+      <line num="28" count="4" type="stmt"/>
+      <line num="29" count="10" type="stmt"/>
+      <line num="30" count="10" type="stmt"/>
+      <line num="31" count="10" type="cond" truecount="5" falsecount="0"/>
+      <line num="32" count="5" type="stmt"/>
+      <line num="33" count="5" type="stmt"/>
+      <line num="35" count="5" type="stmt"/>
+    </file>
+    <file name="auth.routes.ts" path="/Users/nouamaneraji/Dev/node-skeleton/src/auth.routes.ts">
+      <metrics statements="37" coveredstatements="37" conditionals="20" coveredconditionals="20" methods="7" coveredmethods="7"/>
+      <line num="1" count="3" type="stmt"/>
+      <line num="2" count="3" type="stmt"/>
+      <line num="3" count="3" type="stmt"/>
+      <line num="4" count="3" type="stmt"/>
+      <line num="5" count="3" type="stmt"/>
+      <line num="7" count="3" type="stmt"/>
+      <line num="9" count="3" type="stmt"/>
+      <line num="10" count="29" type="stmt"/>
+      <line num="12" count="29" type="cond" truecount="4" falsecount="0"/>
+      <line num="13" count="3" type="stmt"/>
+      <line num="15" count="26" type="cond" truecount="2" falsecount="0"/>
+      <line num="16" count="1" type="stmt"/>
+      <line num="18" count="25" type="cond" truecount="2" falsecount="0"/>
+      <line num="19" count="2" type="stmt"/>
+      <line num="22" count="23" type="stmt"/>
+      <line num="23" count="23" type="cond" truecount="2" falsecount="0"/>
+      <line num="24" count="23" type="stmt"/>
+      <line num="26" count="23" type="stmt"/>
+      <line num="27" count="23" type="stmt"/>
+      <line num="30" count="3" type="stmt"/>
+      <line num="31" count="8" type="stmt"/>
+      <line num="33" count="8" type="cond" truecount="4" falsecount="0"/>
+      <line num="34" count="3" type="stmt"/>
+      <line num="37" count="5" type="stmt"/>
+      <line num="38" count="5" type="cond" truecount="2" falsecount="0"/>
+      <line num="40" count="4" type="stmt"/>
+      <line num="41" count="4" type="cond" truecount="2" falsecount="0"/>
+      <line num="43" count="3" type="stmt"/>
+      <line num="44" count="3" type="stmt"/>
+      <line num="47" count="3" type="stmt"/>
+      <line num="48" count="1" type="stmt"/>
+      <line num="49" count="1" type="stmt"/>
+      <line num="52" count="3" type="stmt"/>
+      <line num="53" count="2" type="stmt"/>
+      <line num="54" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="55" count="1" type="stmt"/>
+      <line num="58" count="3" type="stmt"/>
+    </file>
+    <file name="auth.store.ts" path="/Users/nouamaneraji/Dev/node-skeleton/src/auth.store.ts">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <line num="8" count="6" type="stmt"/>
+      <line num="10" count="6" type="stmt"/>
+      <line num="11" count="25" type="stmt"/>
+    </file>
+    <file name="config.constants.ts" path="/Users/nouamaneraji/Dev/node-skeleton/src/config.constants.ts">
+      <metrics statements="5" coveredstatements="5" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+      <line num="1" count="14" type="cond" truecount="2" falsecount="0"/>
+      <line num="2" count="14" type="stmt"/>
+      <line num="3" count="14" type="stmt"/>
+      <line num="4" count="14" type="cond" truecount="2" falsecount="0"/>
+      <line num="6" count="15" type="stmt"/>
+    </file>
+    <file name="cookie.constants.ts" path="/Users/nouamaneraji/Dev/node-skeleton/src/cookie.constants.ts">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <line num="1" count="6" type="stmt"/>
+      <line num="2" count="6" type="stmt"/>
+      <line num="3" count="6" type="stmt"/>
+    </file>
+    <file name="cookie.helpers.ts" path="/Users/nouamaneraji/Dev/node-skeleton/src/cookie.helpers.ts">
+      <metrics statements="13" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <line num="1" count="4" type="stmt"/>
+      <line num="2" count="4" type="stmt"/>
+      <line num="4" count="4" type="stmt"/>
+      <line num="5" count="4" type="stmt"/>
+      <line num="12" count="4" type="stmt"/>
+      <line num="14" count="4" type="stmt"/>
+      <line num="15" count="31" type="stmt"/>
+      <line num="20" count="31" type="stmt"/>
+      <line num="22" count="31" type="stmt"/>
+      <line num="29" count="31" type="stmt"/>
+      <line num="37" count="4" type="stmt"/>
+      <line num="38" count="3" type="stmt"/>
+      <line num="39" count="3" type="stmt"/>
+    </file>
+    <file name="server.ts" path="/Users/nouamaneraji/Dev/node-skeleton/src/server.ts">
+      <metrics statements="8" coveredstatements="8" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+      <line num="1" count="2" type="stmt"/>
+      <line num="2" count="2" type="stmt"/>
+      <line num="4" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="5" count="1" type="stmt"/>
+      <line num="6" count="1" type="stmt"/>
+      <line num="9" count="2" type="stmt"/>
+      <line num="11" count="2" type="stmt"/>
+      <line num="12" count="2" type="stmt"/>
+    </file>
+  </project>
+</coverage>
