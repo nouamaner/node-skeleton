@@ -33,11 +33,11 @@ app.get("/stats", (_req, res) =>
 app.use("/auth", authRoutes);
 app.use("/account", accountRoutes);
 
-if (process.env.NODE_ENV !== "production") {
-  // eslint-disable-next-line @typescript-eslint/no-require-imports
-  const swaggerUi = require("swagger-ui-express");
-  const { swaggerSpec } = require("./swagger");
-  app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
-}
+//if (process.env.NODE_ENV !== "production") {
+// eslint-disable-next-line @typescript-eslint/no-require-imports
+const swaggerUi = require("swagger-ui-express");
+const { swaggerSpec } = require("./swagger");
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+//}
 
 export default app;
