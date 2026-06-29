@@ -22,6 +22,11 @@ describe("app", () => {
     expect(res.status).not.toBe(404);
   });
 
+  it("routes get /stats", async () => {
+    const res = await request(app).get("/stats").send();
+    expect(res.status).toBe(200);
+  });
+
   it("parses JSON request bodies", async () => {
     const res = await request(app)
       .post("/auth/signup")

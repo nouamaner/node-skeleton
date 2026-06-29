@@ -11,6 +11,8 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(cors({ origin: ALLOWED_ORIGINS, credentials: true }));
 
+app.get("/stats", (_req, res) => res.type("text").send("up"));
+
 app.use("/auth", authRoutes);
 app.use("/account", accountRoutes);
 
