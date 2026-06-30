@@ -27,7 +27,7 @@ app.use(cors({ origin: ALLOWED_ORIGINS, credentials: true }));
  *               example: up
  */
 app.get("/stats", (_req, res) =>
-  res.type("text").send("up " + process.env.VAR_TEST),
+  res.type("text").send("up " + process.env.NODE_ENV),
 );
 
 app.use("/auth", authRoutes);
